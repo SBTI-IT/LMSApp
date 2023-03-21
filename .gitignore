@@ -1,0 +1,7 @@
+#B4a
+bin/
+gen/
+src/
+*.apk
+*.dex
+*b4a.meta
