@@ -1,5 +1,5 @@
-﻿Build1=Default,b4a.example
-File1=index.bal
+﻿Build1=Default,sbti.lms
+File1=login.bal
 File2=register.bal
 FileGroup1=Default Group
 FileGroup2=Default Group
@@ -11,12 +11,13 @@ Module1=Leave
 Module2=LeaveController
 Module3=Profile
 Module4=ProfileController
-Module5=Starter
-Module6=User
-Module7=UserController
+Module5=register
+Module6=Starter
+Module7=User
+Module8=UserController
 NumberOfFiles=2
 NumberOfLibraries=2
-NumberOfModules=7
+NumberOfModules=8
 Version=12
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -44,7 +45,7 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Activity.LoadLayout("index")
+	StartActivity(register)
 End Sub
 
 Sub Activity_Resume
@@ -53,8 +54,4 @@ End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 
-End Sub
-
-Sub Button1_Click
-	
 End Sub
