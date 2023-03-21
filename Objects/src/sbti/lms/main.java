@@ -337,15 +337,15 @@ public class main extends Activity implements B4AActivity{
 
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
-public sbti.lms.index _index = null;
 public sbti.lms.register _register = null;
 public sbti.lms.starter _starter = null;
+public sbti.lms.login _login = null;
 
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
-vis = vis | (index.mostCurrent != null);
 vis = vis | (register.mostCurrent != null);
+vis = vis | (login.mostCurrent != null);
 return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
  //BA.debugLineNum = 25;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -376,9 +376,9 @@ public static void initializeProcessGlobals() {
 	    main.processGlobalsRun = true;
 		try {
 		        main._process_globals();
-index._process_globals();
 register._process_globals();
 starter._process_globals();
+login._process_globals();
 		
         } catch (Exception e) {
 			throw new RuntimeException(e);

@@ -344,8 +344,8 @@ public anywheresoftware.b4a.objects.EditTextWrapper _txtgender = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _txtpassword = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _txtrole = null;
 public sbti.lms.main _main = null;
-public sbti.lms.index _index = null;
 public sbti.lms.starter _starter = null;
+public sbti.lms.login _login = null;
 
 public static void initializeProcessGlobals() {
              try {

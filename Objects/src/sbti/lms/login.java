@@ -14,8 +14,8 @@ import anywheresoftware.b4a.B4AUncaughtException;
 import anywheresoftware.b4a.debug.*;
 import java.lang.ref.WeakReference;
 
-public class index extends Activity implements B4AActivity{
-	public static index mostCurrent;
+public class login extends Activity implements B4AActivity{
+	public static login mostCurrent;
 	static boolean afterFirstLayout;
 	static boolean isFirst = true;
     private static boolean processGlobalsRun = false;
@@ -25,7 +25,7 @@ public class index extends Activity implements B4AActivity{
     ActivityWrapper _activity;
     java.util.ArrayList<B4AMenuItem> menuItems;
 	public static final boolean fullScreen = false;
-	public static final boolean includeTitle = false;
+	public static final boolean includeTitle = true;
     public static WeakReference<Activity> previousOne;
     public static boolean dontPause;
 
@@ -34,7 +34,7 @@ public class index extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new BA(this.getApplicationContext(), null, null, "sbti.lms", "sbti.lms.index");
+			processBA = new BA(this.getApplicationContext(), null, null, "sbti.lms", "sbti.lms.login");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -43,7 +43,7 @@ public class index extends Activity implements B4AActivity{
 		else if (previousOne != null) {
 			Activity p = previousOne.get();
 			if (p != null && p != this) {
-                BA.LogInfo("Killing previous instance (index).");
+                BA.LogInfo("Killing previous instance (login).");
 				p.finish();
 			}
 		}
@@ -86,7 +86,7 @@ public class index extends Activity implements B4AActivity{
 	private void afterFirstLayout() {
         if (this != mostCurrent)
 			return;
-		activityBA = new BA(this, layout, processBA, "sbti.lms", "sbti.lms.index");
+		activityBA = new BA(this, layout, processBA, "sbti.lms", "sbti.lms.login");
         
         processBA.sharedProcessBA.activityBA = new java.lang.ref.WeakReference<BA>(activityBA);
         anywheresoftware.b4a.objects.ViewWrapper.lastId = 0;
@@ -95,19 +95,19 @@ public class index extends Activity implements B4AActivity{
         if (BA.isShellModeRuntimeCheck(processBA)) {
 			if (isFirst)
 				processBA.raiseEvent2(null, true, "SHELL", false);
-			processBA.raiseEvent2(null, true, "CREATE", true, "sbti.lms.index", processBA, activityBA, _activity, anywheresoftware.b4a.keywords.Common.Density, mostCurrent);
+			processBA.raiseEvent2(null, true, "CREATE", true, "sbti.lms.login", processBA, activityBA, _activity, anywheresoftware.b4a.keywords.Common.Density, mostCurrent);
 			_activity.reinitializeForShell(activityBA, "activity");
 		}
         initializeProcessGlobals();		
         initializeGlobals();
         
-        BA.LogInfo("** Activity (index) Create, isFirst = " + isFirst + " **");
+        BA.LogInfo("** Activity (login) Create, isFirst = " + isFirst + " **");
         processBA.raiseEvent2(null, true, "activity_create", false, isFirst);
 		isFirst = false;
 		if (this != mostCurrent)
 			return;
         processBA.setActivityPaused(false);
-        BA.LogInfo("** Activity (index) Resume **");
+        BA.LogInfo("** Activity (login) Resume **");
         processBA.raiseEvent(null, "activity_resume");
         if (android.os.Build.VERSION.SDK_INT >= 11) {
 			try {
@@ -196,7 +196,7 @@ public class index extends Activity implements B4AActivity{
 		}
 	}
     public static Class<?> getObject() {
-		return index.class;
+		return login.class;
 	}
     private Boolean onKeySubExist = null;
     private Boolean onKeyUpSubExist = null;
@@ -268,9 +268,9 @@ public class index extends Activity implements B4AActivity{
 			return;
 		anywheresoftware.b4a.Msgbox.dismiss(true);
         if (!dontPause)
-            BA.LogInfo("** Activity (index) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
+            BA.LogInfo("** Activity (login) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
         else
-            BA.LogInfo("** Activity (index) Pause event (activity is not paused). **");
+            BA.LogInfo("** Activity (login) Pause event (activity is not paused). **");
         if (mostCurrent != null)
             processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
         if (!dontPause) {
@@ -307,11 +307,11 @@ public class index extends Activity implements B4AActivity{
     		this.activity = new WeakReference<Activity>(activity);
     	}
 		public void run() {
-            index mc = mostCurrent;
+            login mc = mostCurrent;
 			if (mc == null || mc != activity.get())
 				return;
 			processBA.setActivityPaused(false);
-            BA.LogInfo("** Activity (index) Resume **");
+            BA.LogInfo("** Activity (login) Resume **");
             if (mc != mostCurrent)
                 return;
 		    processBA.raiseEvent(mc._activity, "activity_resume", (Object[])null);
@@ -336,7 +336,6 @@ public class index extends Activity implements B4AActivity{
     }
 
 public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.objects.TabHostWrapper _tbhost = null;
 public sbti.lms.main _main = null;
 public sbti.lms.register _register = null;
 public sbti.lms.starter _starter = null;
@@ -349,56 +348,30 @@ public static void initializeProcessGlobals() {
             }
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 19;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 21;BA.debugLine="Activity.LoadLayout(\"index\")";
-mostCurrent._activity.LoadLayout("index",mostCurrent.activityBA);
- //BA.debugLineNum = 23;BA.debugLine="addTabs";
-_addtabs();
- //BA.debugLineNum = 24;BA.debugLine="End Sub";
+ //BA.debugLineNum = 18;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 20;BA.debugLine="Activity.LoadLayout(\"login\")";
+mostCurrent._activity.LoadLayout("login",mostCurrent.activityBA);
+ //BA.debugLineNum = 21;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 32;BA.debugLine="End Sub";
+ //BA.debugLineNum = 27;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 29;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 26;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 28;BA.debugLine="End Sub";
-return "";
-}
-public static String  _addtabs() throws Exception{
- //BA.debugLineNum = 47;BA.debugLine="Sub addTabs";
- //BA.debugLineNum = 49;BA.debugLine="tbHost.AddTab(\"Register\", \"register\")";
-mostCurrent._tbhost.AddTab(mostCurrent.activityBA,"Register","register");
- //BA.debugLineNum = 50;BA.debugLine="End Sub";
+ //BA.debugLineNum = 23;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 25;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
  //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 16;BA.debugLine="Private tbHost As TabHost";
-mostCurrent._tbhost = new anywheresoftware.b4a.objects.TabHostWrapper();
- //BA.debugLineNum = 17;BA.debugLine="End Sub";
+ //BA.debugLineNum = 16;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
-return "";
-}
-public static String  _tbhost_click() throws Exception{
- //BA.debugLineNum = 39;BA.debugLine="Private Sub tbHost_Click";
- //BA.debugLineNum = 41;BA.debugLine="End Sub";
-return "";
-}
-public static String  _tbhost_longclick() throws Exception{
- //BA.debugLineNum = 43;BA.debugLine="Private Sub tbHost_LongClick";
- //BA.debugLineNum = 45;BA.debugLine="End Sub";
-return "";
-}
-public static String  _tbhost_tabchanged() throws Exception{
- //BA.debugLineNum = 35;BA.debugLine="Private Sub tbHost_TabChanged";
- //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 }

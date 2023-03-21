@@ -25,9 +25,9 @@ public class usercontroller extends B4AClass.ImplB4AClass implements BA.SubDeleg
 
  public anywheresoftware.b4a.keywords.Common __c = null;
 public sbti.lms.main _main = null;
-public sbti.lms.index _index = null;
 public sbti.lms.register _register = null;
 public sbti.lms.starter _starter = null;
+public sbti.lms.login _login = null;
 public String  _class_globals() throws Exception{
  //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
  //BA.debugLineNum = 3;BA.debugLine="End Sub";
