@@ -349,8 +349,8 @@ vis = vis | (login.mostCurrent != null);
 return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
  //BA.debugLineNum = 25;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 26;BA.debugLine="StartActivity(register)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._register.getObject()));
+ //BA.debugLineNum = 26;BA.debugLine="StartActivity(login)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._login.getObject()));
  //BA.debugLineNum = 27;BA.debugLine="End Sub";
 return "";
 }

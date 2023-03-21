@@ -46,7 +46,7 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	StartActivity(register)
+	StartActivity(login)
 End Sub
 
 Sub Activity_Resume
