@@ -28,6 +28,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=1
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=register,Activity_Create,27,0,Main,Activity_Pause,34,0,Main,Activity_Create,24,0,register,Activity_Pause,36,0,Visual Designer,register.bal,-100,5,register,Globals,21,0,Main,Process_Globals,16,0,Visual Designer,login.bal,-100,5,register,Process_Globals,8,0,login,Activity_Create,19,1
+NavigationStack=Visual Designer,register.bal,-100,6,register,Activity_Create,27,0,Main,Process_Globals,18,0,login,Activity_Pause,42,0,login,Activity_Create,28,2,login,btnLogin_Click,32,0,login,HideLines,32,6,login,lblRegister_Click,40,0,Visual Designer,login.bal,-100,6,login,Globals,19,0
 SelectedBuild=0
 VisibleModules=6,3

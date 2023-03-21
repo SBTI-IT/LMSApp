@@ -356,8 +356,8 @@ public static void initializeProcessGlobals() {
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
  //BA.debugLineNum = 26;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 28;BA.debugLine="Activity.LoadLayout(\"register\")";
-mostCurrent._activity.LoadLayout("register",mostCurrent.activityBA);
+ //BA.debugLineNum = 28;BA.debugLine="Activity.LoadLayout(\"login\")";
+mostCurrent._activity.LoadLayout("login",mostCurrent.activityBA);
  //BA.debugLineNum = 30;BA.debugLine="HideInputLine";
 _hideinputline();
  //BA.debugLineNum = 31;BA.debugLine="End Sub";

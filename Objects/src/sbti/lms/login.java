@@ -25,7 +25,7 @@ public class login extends Activity implements B4AActivity{
     ActivityWrapper _activity;
     java.util.ArrayList<B4AMenuItem> menuItems;
 	public static final boolean fullScreen = false;
-	public static final boolean includeTitle = true;
+	public static final boolean includeTitle = false;
     public static WeakReference<Activity> previousOne;
     public static boolean dontPause;
 
@@ -336,6 +336,10 @@ public class login extends Activity implements B4AActivity{
     }
 
 public anywheresoftware.b4a.keywords.Common __c = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _btnlogin = null;
+public anywheresoftware.b4a.objects.EditTextWrapper _txtpassword = null;
+public anywheresoftware.b4a.objects.EditTextWrapper _txtusername = null;
+public anywheresoftware.b4a.objects.LabelWrapper _lblregister = null;
 public sbti.lms.main _main = null;
 public sbti.lms.register _register = null;
 public sbti.lms.starter _starter = null;
@@ -348,25 +352,54 @@ public static void initializeProcessGlobals() {
             }
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 18;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 20;BA.debugLine="Activity.LoadLayout(\"login\")";
+ //BA.debugLineNum = 23;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 25;BA.debugLine="Activity.LoadLayout(\"login\")";
 mostCurrent._activity.LoadLayout("login",mostCurrent.activityBA);
- //BA.debugLineNum = 21;BA.debugLine="End Sub";
+ //BA.debugLineNum = 27;BA.debugLine="HideLines";
+_hidelines();
+ //BA.debugLineNum = 28;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 27;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 29;BA.debugLine="End Sub";
+ //BA.debugLineNum = 47;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 49;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 23;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 25;BA.debugLine="End Sub";
+ //BA.debugLineNum = 43;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 45;BA.debugLine="End Sub";
+return "";
+}
+public static String  _btnlogin_click() throws Exception{
+ //BA.debugLineNum = 35;BA.debugLine="Private Sub btnLogin_Click";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
  //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 16;BA.debugLine="End Sub";
+ //BA.debugLineNum = 16;BA.debugLine="Private btnLogin As Button";
+mostCurrent._btnlogin = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 17;BA.debugLine="Private txtPassword As EditText";
+mostCurrent._txtpassword = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 18;BA.debugLine="Private txtUsername As EditText";
+mostCurrent._txtusername = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="Private lblRegister As Label";
+mostCurrent._lblregister = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 21;BA.debugLine="End Sub";
+return "";
+}
+public static String  _hidelines() throws Exception{
+ //BA.debugLineNum = 30;BA.debugLine="Sub HideLines";
+ //BA.debugLineNum = 31;BA.debugLine="txtUsername.Color = Colors.Transparent";
+mostCurrent._txtusername.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+ //BA.debugLineNum = 32;BA.debugLine="txtPassword.Color = Colors.Transparent";
+mostCurrent._txtpassword.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+ //BA.debugLineNum = 33;BA.debugLine="End Sub";
+return "";
+}
+public static String  _lblregister_click() throws Exception{
+ //BA.debugLineNum = 39;BA.debugLine="Private Sub lblRegister_Click";
+ //BA.debugLineNum = 41;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
