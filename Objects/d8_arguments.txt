@@ -6,14 +6,14 @@ C:\Android\platforms\android-33\android.jar
 C:\Android\tools\..\extras\b4a_local\unpacked-b4ashared-63804280356000\dex_v1\b4ashared.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-core-63804280356000\dex_v1\core.zip
 C:\Android\tools\..\extras\b4a_local\unpacked-xui-63804280356000\dex_v1\xui.zip
-C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\index$1.dex
-C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\index$B4AMenuItemsClickListener.dex
-C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\index$HandleKeyDelayed.dex
-C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\index$ResumeMessage.dex
-C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\index$WaitForLayout.dex
-C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\index.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\leave.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\leavecontroller.dex
+C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\login$1.dex
+C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\login$B4AMenuItemsClickListener.dex
+C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\login$HandleKeyDelayed.dex
+C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\login$ResumeMessage.dex
+C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\login$WaitForLayout.dex
+C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\login.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\main$1.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\main$B4AMenuItemsClickListener.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\main$HandleKeyDelayed.dex
@@ -37,5 +37,5 @@ C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\starter$starter_BR.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\starter.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\user.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\usercontroller.dex
-C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\designerscripts\LS_index.dex
+C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\designerscripts\LS_login.dex
 C:\xampp\htdocs\LMSApp\Objects\dexed\sbti\lms\designerscripts\LS_register.dex

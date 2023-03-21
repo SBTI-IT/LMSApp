@@ -6,7 +6,7 @@
 	android:versionName="0.0.0.4 UI"
 	android:installLocation="internalOnly">
 	
-	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="30"/>
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="31"/>
 	<supports-screens android:largeScreens="true" 
 	    android:normalScreens="true" 
 	    android:smallScreens="true" 
@@ -32,14 +32,6 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".index"
-			android:label="LMS"
-			android:screenOrientation="unspecified"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
 			android:name=".register"
 			android:label="LMS"
 			android:screenOrientation="unspecified"
@@ -53,5 +45,13 @@
 			android:name=".starter$starter_BR"
 			android:exported="true">
 		</receiver>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".login"
+			android:label="LMS"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
 	</application>
 </manifest>

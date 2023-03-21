@@ -15,12 +15,9 @@ String _tboffset="";
 String _lroffset="";
 views.get("pnlregfrm").vw.setTop((int)(0d));
 views.get("pnlregfrm").vw.setHeight((int)((100d / 100 * height) - (0d)));
-//BA.debugLineNum = 3;BA.debugLine="pnlRegFrm.SetLeftAndRight(0, 100%x)"[register/General script]
 views.get("pnlregfrm").vw.setLeft((int)(0d));
 views.get("pnlregfrm").vw.setWidth((int)((100d / 100 * width) - (0d)));
-//BA.debugLineNum = 5;BA.debugLine="txtFullname.Height = pnlFullname.Height"[register/General script]
 views.get("txtfullname").vw.setHeight((int)((views.get("pnlfullname").vw.getHeight())));
-//BA.debugLineNum = 6;BA.debugLine="txtEmpID.Height = pnlEmpID.Height"[register/General script]
 views.get("txtempid").vw.setHeight((int)((views.get("pnlempid").vw.getHeight())));
 //BA.debugLineNum = 7;BA.debugLine="txtGender.Height = pnlGender.Height"[register/General script]
 views.get("txtgender").vw.setHeight((int)((views.get("pnlgender").vw.getHeight())));
